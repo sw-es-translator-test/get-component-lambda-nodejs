@@ -3,7 +3,7 @@
 version = 0.1
 
 [default.global.parameters]
-stack_name = "translator-nodejs"
+stack_name = "component-nodejs"
 
 [default.build.parameters]
 cached = true
@@ -16,7 +16,7 @@ lint = true
 capabilities = "CAPABILITY_IAM"
 confirm_changeset = true
 resolve_s3 = true
-s3_prefix = "translator-nodejs"
+s3_prefix = "component-nodejs"
 region = "sa-east-1"
 image_repositories = []
 

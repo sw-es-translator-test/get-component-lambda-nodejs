@@ -1,5 +1,5 @@
 {
-  "body": "{\"message\": \"translator\"}",
+  "body": "{\"message\": \"component\"}",
   "resource": "/{proxy+}",
   "path": "/path/to/resource",
   "httpMethod": "POST",

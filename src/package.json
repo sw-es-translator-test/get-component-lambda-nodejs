@@ -1,9 +1,9 @@
 {
-  "name": "translator_world",
+  "name": "component_lambda",
   "version": "1.0.0",
-  "description": "translator sample for NodeJS",
+  "description": "component lambda for NodeJS",
   "main": "app.js",
-  "repository": "https://github.com/awslabs/aws-sam-cli/tree/develop/samcli/local/init/templates/cookiecutter-aws-sam-translator-nodejs",
+  "repository": "https://github.com/awslabs/aws-sam-cli/tree/develop/samcli/local/init/templates/cookiecutter-aws-sam-component-nodejs",
   "author": "SAM CLI",
   "license": "MIT",
   "scripts": {

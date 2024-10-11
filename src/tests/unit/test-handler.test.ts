@@ -1,6 +1,6 @@
 import { describe, expect, it } from '@jest/globals';
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
-import { lambdaHandler } from '../../app';
+import { lambdaHandler } from '../../handlers/component-handler';
 
 describe('Unit test for app handler', function () {
     it('verifies successful response', async () => {
@@ -11,7 +11,7 @@ describe('Unit test for app handler', function () {
             isBase64Encoded: false,
             multiValueHeaders: {},
             multiValueQueryStringParameters: {},
-            path: '/translator',
+            path: '/component',
             pathParameters: {},
             queryStringParameters: {},
             requestContext: {
@@ -42,12 +42,12 @@ describe('Unit test for app handler', function () {
                     userAgent: '',
                     userArn: '',
                 },
-                path: '/translator',
+                path: '/component',
                 protocol: 'HTTP/1.1',
                 requestId: 'c6af9ac6-7b61-11e6-9a41-93e8deadbeef',
                 requestTimeEpoch: 1428582896000,
                 resourceId: '123456',
-                resourcePath: '/translator',
+                resourcePath: '/component',
                 stage: 'dev',
             },
             resource: '',
@@ -58,7 +58,7 @@ describe('Unit test for app handler', function () {
         expect(result.statusCode).toEqual(200);
         expect(result.body).toEqual(
             JSON.stringify({
-                message: 'translator',
+                message: 'component',
             }),
         );
     });

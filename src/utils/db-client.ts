@@ -1,16 +1,15 @@
 import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
-import { DynamoDBDocumentClient, ScanCommand, ScanCommandInput } from "@aws-sdk/lib-dynamodb";
+import { DynamoDBDocumentClient, PutCommand, PutCommandInput } from "@aws-sdk/lib-dynamodb";
 
-export const dbClient = async (params: ScanCommandInput) => {
+export const putDynamoDB = async (params: PutCommandInput) => {
     const client = new DynamoDBClient({ region: process.env.AWS_REGION });
     const docClient = DynamoDBDocumentClient.from(client);
-    const command = new ScanCommand(params);
+    const command = new PutCommand(params);
 
     try {
-        const results: any = await docClient.send(command);
-        return results;
+        await docClient.send(command);
     } catch (err) {
         console.error(err);
-        return null;
+        throw new Error('Error adding component');
     }
 };
