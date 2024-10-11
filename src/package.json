@@ -1,5 +1,5 @@
 {
-  "name": "component_lambda",
+  "name": "get_component_lambda",
   "version": "1.0.0",
   "description": "component lambda for NodeJS",
   "main": "app.js",
